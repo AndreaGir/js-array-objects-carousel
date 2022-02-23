@@ -1,4 +1,4 @@
-const immaginiCitta = [
+ const immaginiCitta = [
     "immagini/01.jpg",
     "immagini/02.jpg",
     "immagini/03.jpg",
@@ -12,6 +12,29 @@ let titoliCitta = [
     "Gran Bretagna",
     "Germania",
     "Paradise"
+] 
+
+const slide = [
+    {
+        titolo: 'svezia',
+        image: "immagini/01.jpg",
+    },
+    {
+        titolo: 'Svizzera',
+        image: "immagini/02.jpg",
+    },
+    {
+        titolo: 'Gran Bretagna',
+        image: "immagini/03.jpg",
+    },
+    {
+        titolo: 'Germania',
+        image: "immagini/04.jpg",
+    },
+    {
+        titolo: 'Paradise',
+        image: "immagini/05.jpg",
+    },
 ]
 
 const containerDiv = document.querySelector(".container")
@@ -26,13 +49,15 @@ const slides = [];
 
 
 
-for (let i = 0 ; i < immaginiCitta.length ; i++){
+for (let i = 0 ; i < slide.length ; i++){
+
+    const { titolo, image } = slide[i]
 
     const divElement = document.createElement('div');
 
-    divElement.classList.add('slide')
+    divElement.classList.add('slider')
 
-    const carta = `<h2>${titoliCitta[i]}</h2><img src="${immaginiCitta[i]}">`
+    const carta = `<h2>${ titolo }</h2><img src="${ immagine }">`
 
     containerDiv.append(divElement)
 
